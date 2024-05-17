@@ -100,7 +100,7 @@
         to the view.
       </p>
 
-      <p>This text is binded  -> {{ title }}</p>
+      <p>This text is binded -> {{ title }}</p>
     </div>
 
     <div>
@@ -109,7 +109,7 @@
         Binds an event of an HTML element to a method in the component using
         parentheses ( )
       </p>
-      <div style="display: flex; align-items: center ; margin-top: 20px;">
+      <div style="display: flex; align-items: center; margin-top: 20px">
         <p>Counter: {{ counter }}</p>
         <button class="content-button" (click)="incrementCounter()">
           Increment
@@ -191,7 +191,14 @@
         existing DOM element For e.g ngClass , ngStyle etc
       </p>
 
-      <div style="display: flex; align-items: center; justify-content: start ; margin-top: 10px;">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          margin-top: 10px;
+        "
+      >
         <div
           [ngClass]="{ highlight: isHighlighted }"
           [ngStyle]="{ 'font-size.px': fontSize }"
@@ -250,20 +257,49 @@
       Common examples include @Component, @Directive, @Pipe, @Injectable, and
       @NgModule.
     </p>
+    <p>Example</p>
+    <p>
+      {{ "{{ @Component({
+      selector: 'app-hero',
+      templateUrl: './hero.component.html',
+      styleUrls: ['./hero.component.css']
+    })
+
+
+
+
+
+      }}" }}
+    </p>
     <h4>Property Decorators:</h4>
     <p>
       These decorators are used to attach metadata to properties within a class.
       Common examples include @Input, @Output, and @ViewChild.
     </p>
+    <p>Example</p>
+    <p>{{ "@Input() heroName: string" }}</p>
+    <p>{{ "@Output() notify = new EventEmitter()" }}</p>
     <h4>Method Decorators:</h4>
     <p>
       These decorators are used to add metadata to methods within a class.
       Example includes @HostListener.
     </p>
+    <p>Example</p>
+    <p>
+      {{
+        " @HostListener('click', ['$event']) onClick(event: Event) { alert('Element clicked!');}"
+      }}
+    </p>
     <h4>Parameter Decorators:</h4>
     <p>
       These decorators are used to add metadata to parameters of a class
       constructor. Example includes @Inject.
+    </p>
+    <p>Example</p>
+    <p>
+      {{
+        "@Injectable() export class SomeService { constructor(@Inject(SomeDependency) private dependency) { } }"
+      }}
     </p>
   </div>
 </div>
