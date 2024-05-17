@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  &__links-container {
+    display: flex;
+
+    &__links {
+      font-size: larger;
+      margin: 12px;
+    }
+  }
+}
